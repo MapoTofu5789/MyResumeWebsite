@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        top-panel a {
+            font-size: large;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        boxs a {
+            max-width: 800px;
+            font-size: larger;
+            font-weight: bold;
+            z-index: 1;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 3px black;
+        }
+        .main-heading {
+            background-image: url("/images/Workshop.jpg");
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            margin: 0;
+            height: 700px;
+            width: 100%;
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+        .animated-box {
+            height: 300px;
+            width: 60%;
+            margin: 20px;
+
+            background-size: cover; 
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.4); 
+            background-blend-mode: overlay;
+
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50px; 
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .animated-box:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body >
+    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(212, 209, 209); align-items: center; justify-content: center; gap: 15%;">
+        <a href="/index.html">Home Page</a>
+        <a href="/project.html">My Projects</a>
+        <a href="/schools.html">My Schools</a>
+        <a href="/experience.html">Work experience</a>
+    </top-panel>
+
+    <headline>
+        <h1 class="main-heading" style="text-shadow: 1px 1px 3px black;">
+            <i>Hi, I'm</i>
+            <span style="font-size: 60px;">Sam Gu.</span>
+        </h1>
+    </headline>
+
+    <divider style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <br>
+        <span style="border-bottom: 2px solid grey; width: 50%;"></span>
+        <h1 style="font-size: large;">Get to know me</h1>
+        <span style="border-top: 2px solid grey; width: 50%;"></span>
+        <br>
+    </divider>
+
+    <boxs>
+        <project-box style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <a class="animated-box" href="project.html" style="background-image: url(/images/Workshop.jpg);">Discover My Projects</a>
+        </project-box>
+        <school-box style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <a class="animated-box" href="schools.html">Schools I Graduated from</a>
+        </school-box>
+        <experience-box style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <a class="animated-box" href="experience.html">My Work Experience</a>
+        </experience-box>
+    </boxs>
+
+    <contact style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: left;">
+        <br>
+        <span style="border-bottom: 2px solid grey; width: 50%;"></span>
+        <h1 style="font-size: large; width: 50%;">Contact:<br>Phone Number: (+61) 432945789<br>Email Address: a3123089336@gmail.com</h1>
+        <span style="border-top: 2px solid grey; width: 50%;"></span>
+        <br>
+        <br>
+    </contact>
+</body>
+</html>
