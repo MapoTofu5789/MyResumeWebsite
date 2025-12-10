@@ -42,18 +42,24 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        .media-item {
+        img.media-item {
             width: calc(50% - 7.5px); 
             height: auto;
             border-radius: 8px;
             object-fit: cover;
             display: block;
         }
+        video.media-item {
+            width: 100%; 
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
         @media (max-width: 768px) {
             .media-column {
                 width: 100%;
             }
-            .media-item {
+            img.media-item {
                 width: 100%;
             }
         }
