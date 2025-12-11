@@ -26,7 +26,7 @@
             text-shadow: 1px 1px 3px black;
         }
         .main-heading {
-            background-image: url("https://www.midorg.com/midlogo.png");
+            background-image: url("images/school.jpg");
             background-size: cover; 
             background-repeat: no-repeat;
             background-position: center center;
@@ -41,33 +41,51 @@
             text-align: center;
             justify-content: center;
         }
-        .animated-box {
-            height: 300px;
-            width: 60%;
-            margin: 20px;
-
-            background-image: url("https://www.midorg.com/midlogo.png");
-            background-size: cover; 
-            background-position: center;
-            background-color: rgba(0, 0, 0, 0.4); 
-            background-blend-mode: overlay;
-
-            transition: transform 0.3s ease-in-out;
-            border-radius: 50px; 
-
+        .school-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
         }
-        .animated-box:hover {
-            transform: scale(1.05); 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        .school-card {
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .school-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .school-name {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .school-details {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0056b3;
         }
     </style>
 </head>
 
 <body >
-    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(212, 209, 209); align-items: center; justify-content: center; gap: 15%;">
+    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(229, 228, 248); align-items: center; justify-content: center; gap: 10%;">
         <a href="index.html">Home Page</a>
         <a href="project.html">My Projects</a>
         <a href="schools.html">My Schools</a>
@@ -76,22 +94,40 @@
 
     <headline>
         <h1 class="main-heading" style="text-shadow: 1px 1px 3px black;">
-            <span style="font-size: 60px;">Schools I Graduated from.</span>
+            <span style="font-size: 60px;">My Academic Background.</span>
         </h1>
     </headline>
 
     <divider style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <br>
         <span style="border-bottom: 2px solid grey; width: 50%;"></span>
-        <h1 style="font-size: large;">My Schools</h1>
+        <h1 style="font-size: large; color: #333;">Education History</h1>
         <span style="border-top: 2px solid grey; width: 50%;"></span>
         <br>
     </divider>
 
-    <boxs>
-        <project1-box style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <a class="animated-box" href="">School1</a>
-        </project1-box>
-    </boxs>
+    <div class="school-container">
+        
+        <div class="school-card">
+            <div class="school-title">Bachelor of Science</div>
+            <div class="school-name">The University of Melbourne</div>
+            <div class="school-details">
+                <p>📍 <strong>Melbourne, VIC</strong> | 📅 Mar 2023 - Dec 2025</p>
+                <p>Major in <strong>Computing and Software Systems</strong></p>
+                <p class="highlight">Weighted Average Mark (WAM): 77.652</p>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="school-title">High School Diploma</div>
+            <div class="school-name">Ivanhoe Grammar School</div>
+            <div class="school-details">
+                <p>📍 <strong>Ivanhoe, VIC</strong> | 📅 Oct 2020 - Dec 2022</p>
+                <p class="highlight">ATAR Score: 98.00</p>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
