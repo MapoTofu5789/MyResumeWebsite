@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portable Magsafe Controller Project</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        top-panel a {
+            font-size: large;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        .project-container {
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .text-column {
+            flex: 1;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .text-column h2 {
+            border-bottom: 2px solid grey;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .media-column {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .media-item {
+            width: calc(30% - 7.5px); 
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .media-column {
+                width: 100%;
+            }
+            .media-item {
+                width: calc(50% - 7.5px);
+            }
+        }
+    </style>
+</head>
+
+<body >
+    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(212, 209, 209); align-items: center; justify-content: center; gap: 15%;">
+        <a href="../index.html">Home Page</a>
+        <a href="../project.html">My Projects</a>
+        <a href="../schools.html">My Schools</a>
+        <a href="../experience.html">Work Experience</a>
+    </top-panel>
+
+    <divider style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <br>
+        <span style="border-bottom: 2px solid grey; width: 50%;"></span>
+        <h1 style="font-size: large;">Gen-AI Quiz App</h1>
+        <span style="border-top: 2px solid grey; width: 50%;"></span>
+        <br>
+    </divider>
+
+    <div class="project-container">
+        <div class="media-column">
+            <img src="../images/genai1.jpg" class="media-item">
+            <img src="../images/genai2.jpg" class="media-item">
+            <img src="../images/genai3.jpg" class="media-item">
+            <img src="../images/genai4.jpg" class="media-item">
+            <img src="../images/genai5.jpg" class="media-item">
+            <img src="../images/genai6.jpg" class="media-item">
+            <img src="../images/genai7.jpg" class="media-item">
+            <video src="../videos/genai.mp4" class="media-item" controls loop></video>
+        </div>
+
+        <div class="text-column">
+            <p>This is a project i completed with two univeristy classmates, aiming to create a educational app helps students practice course material independently.
+            It serves as an interactive quiz-based learning platform designed to gamify the subject of Object-Oriented Software Design (OOSD).</p>
+            <hr>
+            <h2>What it does:</h2>
+            <p>The application is built using Flutter and Firebase.</p>
+            <p>Game Modes: A PvP mode that synchronizes questions in real-time between students,
+            and a PvAI mode where the AI simulates a human opponent with 70% accuracy (using Gemini API to pre-generate questions and avoid latency).</p>
+            <p>Discussion & Ranking: A leaderboard to encourage competition and an integrated discussion board for Q&A and view announcements.</p>
+            <p>Admin Tools: Coordinators can manually input quizzes or use our AI-powered feature to automatically generate subject-specific questions.</p>
+            <hr>
+            <p>In this project, as a core developer, I was responsible for both front-end and back-end implementation.</p>
+            <p>I integrated the Gemini API for dynamic question generation, handled the full Firebase backend integration, and resolved UI overflow bugs across devices.</p>
+            <p>I also prioritized a strong, collaborative dynamic within the group by communicating openly, respecting team consensus, and proactively supporting teammates with technical issues.</p>
+        </div>
+    </div>
+</body>
+</html>
