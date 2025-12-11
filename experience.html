@@ -16,17 +16,8 @@
             color: black;
             text-decoration: none;
         }
-        boxs a {
-            max-width: 800px;
-            font-size: larger;
-            font-weight: bold;
-            z-index: 1;
-            color: white;
-            text-decoration: none;
-            text-shadow: 1px 1px 3px black;
-        }
         .main-heading {
-            background-image: url("https://www.midorg.com/midlogo.png");
+            background-image: url("images/work-background.png");
             background-size: cover; 
             background-repeat: no-repeat;
             background-position: center center;
@@ -41,33 +32,69 @@
             text-align: center;
             justify-content: center;
         }
-        .animated-box {
-            height: 300px;
-            width: 60%;
-            margin: 20px;
-
-            background-image: url("https://www.midorg.com/midlogo.png");
-            background-size: cover; 
-            background-position: center;
-            background-color: rgba(0, 0, 0, 0.4); 
-            background-blend-mode: overlay;
-
-            transition: transform 0.3s ease-in-out;
-            border-radius: 50px; 
-
+        .experience-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
         }
-        .animated-box:hover {
-            transform: scale(1.05); 
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        .job-card {
+            background-color: white;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .job-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .company-name {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .job-details {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+        .job-details li {
+            margin-bottom: 8px;
+        }
+        .work-gallery {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .work-gallery img {
+            width: auto;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .work-gallery img:hover {
+            transform: scale(1.30);
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body >
-    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(255, 255, 226); align-items: center; justify-content: center; gap: 10%;">
+    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(210, 210, 210); align-items: center; justify-content: center; gap: 10%;">
         <a href="index.html">Home Page</a>
         <a href="project.html">My Projects</a>
         <a href="schools.html">My Schools</a>
@@ -76,22 +103,62 @@
 
     <headline>
         <h1 class="main-heading" style="text-shadow: 1px 1px 3px black;">
-            <span style="font-size: 60px;">My Work Experience</span>
+            <span style="font-size: 60px;">Work Experience.</span>
         </h1>
     </headline>
 
     <divider style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <br>
         <span style="border-bottom: 2px solid grey; width: 50%;"></span>
-        <h1 style="font-size: large;">Work Experience</h1>
+        <h1 style="font-size: large;">Work History</h1>
         <span style="border-top: 2px solid grey; width: 50%;"></span>
         <br>
     </divider>
 
-    <boxs>
-        <project1-box style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-            <a class="animated-box" href="">Work1</a>
-        </project1-box>
-    </boxs>
+    <div class="experience-container">
+        <div class="job-card">
+            <div class="job-title">Interior Designer Intern</div>
+            <div class="company-name">HeYue Design Inc.</div>
+            <div class="job-details">
+                <p>📍 <strong>Jinhua, Zhejiang, China</strong> | 📅 July 2025 – August 2025</p>
+                <ul>
+                    <li>Conducted on-site surveys to obtain accurate apartment dimensions and translated these measurements into precise 2D structural layouts using Autodesk CAD.</li>
+                    <li>Developed detailed 3D models in SketchUp to render and visualize final decoration concepts for client presentations.</li>
+                    <li>Recognized for quickly adapting to the team’s workflow and strong collaboration skills.</li>
+                </ul>
+
+                <div class="work-gallery">
+                    <img src="images/design1.png">
+                    <img src="images/design2.jpg">
+                    <img src="images/design3.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-title">Bicycle Mechanic</div>
+            <div class="company-name">Samson Cycles Inc.</div>
+            <div class="job-details">
+                <p>📍 <strong>Melbourne, VIC</strong> | March 2024 – May 2024</p>
+                <ul>
+                    <li>Diagnosed and repaired a wide range of bicycle issues, demonstrating mechanical aptitude and problem-solving skills.</li>
+                    <li>Managed inventory of parts and tools, ensuring the smooth operation of the repair workshop and showing attention to detail.</li>
+                    <li>Provided excellent customer service, explaining repair options and maintenance tips clearly and professionally.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <div class="job-title">Cashier and Shelf Stocker</div>
+            <div class="company-name">Seasons Asian Grocery</div>
+            <div class="job-details">
+                <p>📍 <strong>Melbourne, VIC</strong> | February 2023 – July 2023</p>
+                <ul>
+                    <li>Managed inventory and organized product displays to ensure an appealing shopping environment.</li>
+                    <li>Developed strong communication skills through frequent interaction with a diverse customer base.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
