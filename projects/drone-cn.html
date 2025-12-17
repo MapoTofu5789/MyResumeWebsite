@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom FPV Drone Gear Project</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        top-panel a {
+            font-size: large;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+        .language-button {
+            font-size: medium;
+            transition: all 0.3s ease;
+        }
+
+        .language-button:hover {
+            background-color: black;
+            color: white !important;
+            cursor: pointer;
+        }
+        .project-container {
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        .text-column {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .text-column h2 {
+            border-bottom: 2px solid grey;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        .media-row {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            width: 100%;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        img.media-item {
+            width: auto; 
+            height: 400px;
+            border-radius: 20px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.2s;
+        }
+        video.media-item {
+            width: auto; 
+            height: 400px;
+            border-radius: 20px;
+            display: block;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            top-panel {
+                flex-direction: column !important;
+                height: auto !important;
+                padding: 10px 0;
+                gap: 15px !important;
+            }
+            .media-row {
+                justify-content: center; 
+            }
+        }
+    </style>
+</head>
+
+<body >
+    <top-panel style="width: 100%; height: 50px; display: flex; flex-direction: row; background-color: rgb(234, 255, 234); align-items: center; justify-content: center; gap: 10%;">
+        <a href="../index-cn.html">主页</a>
+        <a href="../project-cn.html">我的项目</a>
+        <a href="../school-cn.html">教育背景</a>
+        <a href="../experience-cn.html">工作经验</a>
+        <a href="../projects/drone.html" class="language-button" style="border: 2px solid black; padding: 1px 15px; border-radius: 20px;">English</a>
+    </top-panel>
+
+    <divider style="margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <br>
+        <span style="border-bottom: 2px solid grey; width: 50%;"></span>
+        <h1 style="font-size: large;">定制 FPV 无人机装备</h1>
+        <span style="border-top: 2px solid grey; width: 50%;"></span>
+        <br>
+    </divider>
+
+    <div class="project-container">
+        <h2>1. GPS 固定座</h2>
+        <div class="media-row">
+            <video src="../videos/fpv-gps-holder.mp4" class="media-item" controls loop></video>
+            <img src="../images/fpv-gps-holder1.jpg" class="media-item">
+            <img src="../images/fpv-gps-holder2.jpg" class="media-item">
+        </div>
+        <div class="text-column">
+            <p>该固定座使用 Fusion 360 设计，并采用 TPU（柔性材料）打印而成。它能在遭受撞击时吸收冲击力，保护 GPS 芯片，同时保持最佳角度以便快速锁定卫星信号。</p>
+            <hr>
+        </div>
+        <h2>2. 飞行眼镜与遥控器收纳盒</h2>
+        <div class="media-row">
+            <img src="../images/fpv-box1.jpg" class="media-item">
+            <img src="../images/fpv-box2.jpg" class="media-item">
+            <video src="../videos/fpv-box.mp4" class="media-item" controls loop></video>
+        </div>
+        <div class="text-column">
+            <p>这是一个专为我的 FPV 飞行眼镜和遥控器尺寸定制的硬质收纳盒。可有效防止设备在携带与运输过程中相互刮擦。</p>
+            <hr>
+        </div>
+        <h2>3. 无人机背包外挂绑带</h2>
+        <div class="media-row">
+            <img src="../images/fpv-bag-strap1.jpg" class="media-item">
+            <img src="../images/fpv-bag-strap2.jpg" class="media-item">
+            <img src="../images/fpv-bag-strap3.jpg" class="media-item">
+        </div>
+        <div class="text-column">
+            <p>我设计的一套定制的卡扣绑带系统，可安装在背包外部。它能将无人机牢固地固定在包外，从而为背包内部腾出更多空间来存放电池和工具。</p>
+        </div>
+    </div>
+</body>
+</html>
